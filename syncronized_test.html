@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/index.js"></script>
+    <link rel="stylesheet" href="src/index.css"/>
+</head>
+<body>
+<h1 class="type-demo-header">test1</h1>
+<h2 class="type-demo-header">test2 it is sync</h2>
+<script>
+    const typeDemoHeaderss = document.querySelectorAll(".type-demo-header");
+    for (let typeDemo of typeDemoHeaderss) {
+        new Typing(
+            typeDemo,
+            [typeDemo.innerText + "asdfqwer", typeDemo.innerText + "zxcv"],
+            100,
+            800,
+            {
+                taskId: typeDemo.textContent,
+                groupId: "header"
+            },
+            {
+                isLoop: true,
+                isBackspace: true,
+                backSpeed: 30,
+                backDelay: 100,
+                isCursor: true,
+            }
+        ).start();
+    }
+</script>
+</body>
+</html>

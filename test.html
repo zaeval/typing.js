@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/index.js"></script>
+    <link rel="stylesheet" href="src/index.css"/>
+    <link rel="stylesheet" href="../../Downloads/cloud-9-client.webflow/css/webflow.css">
+</head>
+<body>
+<h1 class="type-demo-header">test1</h1>
+<h2 class="type-demo-header">test2 it is async</h2>
+<script>
+    const typeDemoHeaderss = document.querySelectorAll(".type-demo-header");
+    for (let typeDemo of typeDemoHeaderss) {
+        new Typing(
+            typeDemo,
+            [typeDemo.innerText + "asdfqwer", typeDemo.innerText + "zxcv"],
+            100,
+            800,
+            {},
+            {
+                isLoop: true,
+                isCursor: true,
+                isBackspace: true,
+                backSpeed: 50,
+                backDelay: 300,
+            }
+        ).start();
+    }
+</script>
+</body>
+</html>
